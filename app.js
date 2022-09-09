@@ -1,4 +1,15 @@
 
+var links = document.querySelectorAll("nav ul li a");
+links.forEach(link =>{
+    link.addEventListener("click" , (e)=>{
+        e.preventDefault();
+        const id = e.target.getAttribute("href");
+        console.log(id);
+        document.querySelector(id).scrollIntoView({behavior:"smooth"});
+    })
+})
+
+
 
 
 var menuBtn = document.querySelector("#menubtn");
@@ -18,4 +29,3 @@ menuBtn.addEventListener("click", (e)=>{
     }
     
 );
- 
